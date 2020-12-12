@@ -159,7 +159,7 @@ public class RayaHouse extends JFrame implements ActionListener
       //Configure the frame
       getContentPane().setBackground(Color.white);
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      setSize(500, 650);
+      setSize(1200, 750);
       setLocation(300,40);
       setVisible(true);
  
