@@ -11,7 +11,7 @@ public class RayaHouse extends JFrame implements ActionListener
    private JButton SampulsButton;
    private JButton KetupatsButton;
    private JButton StarsButton;
-   private JButton MoonButton;
+   private JButton MoonsButton;
    private JButton addAllButton;
    private JButton exitButton;
  
@@ -128,7 +128,7 @@ public class RayaHouse extends JFrame implements ActionListener
       SampulsButton.setForeground(Color.white);
       KetupatsButton.setForeground(Color.white);
       StarsButton.setForeground(Color.white);
-      MoonsButton.setForeground(Color.white)
+      MoonsButton.setForeground(Color.white);
       addAllButton.setForeground(Color.white);
       exitButton.setForeground(Color.white);
  
@@ -293,7 +293,7 @@ public class RayaHouse extends JFrame implements ActionListener
  
       }//if stars
       
-      if(event.getSource()==MoonButton)
+      if(event.getSource()==MoonsButton)
       {
          rayaLights = false;
          ketupats = false;
