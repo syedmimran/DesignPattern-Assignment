@@ -1,4 +1,4 @@
-import javax.swing.*;
+mport javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.*;
@@ -10,7 +10,7 @@ public class RayaHouse extends JFrame implements ActionListener
    private JButton RayaLightsButton;
    private JButton SampulsButton;
    private JButton KetupatsButton;
-   private JButton StarsButton;
+   private JButton PelitaButton;
    private JButton MoonsButton;
    private JButton addAllButton;
    private JButton exitButton;
@@ -28,13 +28,13 @@ public class RayaHouse extends JFrame implements ActionListener
 //   private boolean rayalights = true;
 //   private boolean sampuls = true;
 //   private boolean ketupats = true;
-//   private boolean stars = true;
+//   private boolean pelita = true;
 //   private boolean moons = true;
    
    private boolean rayalights = false;
    private boolean sampuls = false;
    private boolean ketupats = false;
-   private boolean stars = false;
+   private boolean pelita = false;
    private boolean moons = false;
  
    public RayaHouse()
@@ -100,7 +100,7 @@ public class RayaHouse extends JFrame implements ActionListener
       RayaLightsButton = new JButton("RayaLights");
       SampulsButton = new JButton("Sampuls");
       KetupatsButton = new JButton("Ketupats");
-      StarsButton = new JButton("Stars");
+      PelitaButton = new JButton("Pelita");
       MoonsButton = new JButton("Moons");
       addAllButton = new JButton("Add All");
       exitButton = new JButton("Exit");
@@ -109,7 +109,7 @@ public class RayaHouse extends JFrame implements ActionListener
       RayaLightsButton.setBackground(Color.green);
       SampulsButton.setBackground(Color.green);
       KetupatsButton.setBackground(Color.green);
-      StarsButton.setBackground(Color.green);
+      PelitaButton.setBackground(Color.green);
       MoonsButton.setBackground(Color.green);
       addAllButton.setBackground(Color.green);
       exitButton.setBackground(Color.green);
@@ -118,7 +118,7 @@ public class RayaHouse extends JFrame implements ActionListener
       RayaLightsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC, 28));
       SampulsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC,28));
       KetupatsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC, 28));
-      StarsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC,28));
+      PelitaButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC,28));
       MoonsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC, 28));
       addAllButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC,28));
       exitButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC,28));
@@ -127,7 +127,7 @@ public class RayaHouse extends JFrame implements ActionListener
       RayaLightsButton.setForeground(Color.white);
       SampulsButton.setForeground(Color.white);
       KetupatsButton.setForeground(Color.white);
-      StarsButton.setForeground(Color.white);
+      PelitaButton.setForeground(Color.white);
       MoonsButton.setForeground(Color.white);
       addAllButton.setForeground(Color.white);
       exitButton.setForeground(Color.white);
@@ -136,7 +136,7 @@ public class RayaHouse extends JFrame implements ActionListener
       buttonPanel.add(RayaLightsButton);
       buttonPanel.add(SampulsButton);
       buttonPanel.add(KetupatsButton);
-      buttonPanel.add(StarsButton);
+      buttonPanel.add(PelitaButton);
       buttonPanel.add(MoonsButton);
       buttonPanel.add(addAllButton);
       buttonPanel.add(exitButton);
@@ -145,7 +145,7 @@ public class RayaHouse extends JFrame implements ActionListener
       RayaLightsButton.addActionListener(this);
       SampulsButton.addActionListener(this);
       KetupatsButton.addActionListener(this);
-      StarsButton.addActionListener(this);
+      PelitaButton.addActionListener(this);
       MoonsButton.addActionListener(this);
       addAllButton.addActionListener(this);
       exitButton.addActionListener(this);
@@ -231,9 +231,9 @@ public class RayaHouse extends JFrame implements ActionListener
  
       }//if sampuls
       
-      if(stars)
+      if(pelita)
       {
-         //draw stars
+         //draw pelita
     	  //draw sampuls
           g.setColor(Color.red);
        //   g.fillRect(320,500,60,60);
@@ -251,7 +251,7 @@ public class RayaHouse extends JFrame implements ActionListener
           
              g.fillRect(120,400,60,60);
           g.fillRect(360,440,30,30);
-      }//if stars
+      }//if pelita
       
       if(moons)
       {
@@ -286,7 +286,7 @@ public class RayaHouse extends JFrame implements ActionListener
          rayalights = true;
          ketupats = false;
          sampuls = false;
-         stars = false;
+         pelita = false;
          moons = false;
          repaint();
  
@@ -297,7 +297,7 @@ public class RayaHouse extends JFrame implements ActionListener
          rayalights = false;
          ketupats = false;
          sampuls = true;
-         stars = false;
+         pelita = false;
          moons = false;
          repaint();
  
@@ -308,29 +308,29 @@ public class RayaHouse extends JFrame implements ActionListener
          rayalights = false;
          ketupats = true;
          sampuls = false;
-         stars = false;
+         pelita = false;
          moons = false;
          repaint();
  
       }//if ketupats
  
-      else if(event.getSource()==StarsButton)
+      else if(event.getSource()==PelitaButton)
       {
          rayalights = false;
          ketupats = false;
          sampuls = false;
-         stars = true;
+         pelita = true;
          moons = false;
          repaint();
  
-      }//if stars
+      }//if pelita
       
       else if(event.getSource()==MoonsButton)
       {
          rayalights = false;
          ketupats = false;
          sampuls = false;
-         stars = false;
+         pelita = false;
          moons = true;
          repaint();
  
@@ -340,7 +340,7 @@ public class RayaHouse extends JFrame implements ActionListener
          rayalights = true;
          ketupats = true;
          sampuls = true;
-         stars = true;
+         pelita = true;
          moons = true;
          repaint();
       }//if add all
