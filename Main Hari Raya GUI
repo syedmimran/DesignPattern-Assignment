@@ -25,13 +25,13 @@ public class RayaHouse extends JFrame implements ActionListener
    private ImageIcon image;
  
    //Boolean
-//   private boolean rayaLights = true;
+//   private boolean rayalights = true;
 //   private boolean sampuls = true;
 //   private boolean ketupats = true;
 //   private boolean stars = true;
 //   private boolean moons = true;
    
-   private boolean rayaLights = false;
+   private boolean rayalights = false;
    private boolean sampuls = false;
    private boolean ketupats = false;
    private boolean stars = false;
@@ -40,15 +40,15 @@ public class RayaHouse extends JFrame implements ActionListener
    public RayaHouse()
    {
       //Set title
-      setTitle("Decorate the Raya House");
+      setTitle("Decorate the Raya House!");
  
       setLayout(new BorderLayout());
  
       //Setting the title of the JLabel
-      title = new JLabel("Click on the button to add the adornment to the house.");
+      title = new JLabel("Click on the button to add the Decorations to the house.");
  
       //Setting the font
-      title.setFont(new Font("CENTURY GOTHIC", Font.ITALIC, 15));
+      title.setFont(new Font("CENTURY GOTHIC", Font.ITALIC, 38));
  
       //Setting the text colour to green and positioning it to the centre
       title.setForeground(Color.green);
@@ -115,13 +115,13 @@ public class RayaHouse extends JFrame implements ActionListener
       exitButton.setBackground(Color.green);
  
       //Setting font on buttons
-      RayaLightsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC, 16));
-      SampulsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC,16));
-      KetupatsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC, 16));
-      StarsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC,16));
-      MoonsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC, 16));
-      addAllButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC,16));
-      exitButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC,16));
+      RayaLightsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC, 28));
+      SampulsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC,28));
+      KetupatsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC, 28));
+      StarsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC,28));
+      MoonsButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC, 28));
+      addAllButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC,28));
+      exitButton.setFont(new Font("CENTURY GOTHIC", Font.ITALIC,28));
  
       //Setting font colour on buttons
       RayaLightsButton.setForeground(Color.white);
@@ -170,7 +170,7 @@ public class RayaHouse extends JFrame implements ActionListener
       //Call the paint method of the superclass
       super.paint(g);
  
-      if(rayaLights)
+      if(rayalights)
       {
          //draw Raya Lights
          g.setColor(Color.white);
@@ -234,13 +234,45 @@ public class RayaHouse extends JFrame implements ActionListener
       if(stars)
       {
          //draw stars
-     
+    	  //draw sampuls
+          g.setColor(Color.red);
+       //   g.fillRect(320,500,60,60);
+      //    g.fillRect(140,480,30,30);
+          g.fillRect(320,400,60,60);
+          g.fillRect(140,380,30,30);
+  
+          g.setColor(Color.orange);
+       //   g.fillRect(180,530,40,40);
+             g.fillRect(180,430,40,40);
+  
+          g.setColor(Color.blue);
+     //     g.fillRect(120,500,60,60);
+       //   g.fillRect(360,540,30,30);
+          
+             g.fillRect(120,400,60,60);
+          g.fillRect(360,440,30,30);
       }//if stars
       
       if(moons)
       {
          //draw moons
-     
+    	  //draw sampuls
+          g.setColor(Color.red);
+       //   g.fillRect(320,500,60,60);
+      //    g.fillRect(140,480,30,30);
+          g.fillRect(320,400,60,60);
+          g.fillRect(140,380,30,30);
+  
+          g.setColor(Color.orange);
+       //   g.fillRect(180,530,40,40);
+             g.fillRect(180,430,40,40);
+  
+          g.setColor(Color.blue);
+     //     g.fillRect(120,500,60,60);
+       //   g.fillRect(360,540,30,30);
+          
+             g.fillRect(120,400,60,60);
+          g.fillRect(360,440,30,30);
       }//if moons
  
    } //paint
@@ -251,18 +283,18 @@ public class RayaHouse extends JFrame implements ActionListener
  
       if(event.getSource()==RayaLightsButton)
       {
-         rayaLights = true;
+         rayalights = true;
          ketupats = false;
          sampuls = false;
          stars = false;
          moons = false;
          repaint();
  
-      }//if rayaLights
+      }//if rayalights
  
       else if(event.getSource()==SampulsButton)
       {
-         rayaLights = false;
+         rayalights = false;
          ketupats = false;
          sampuls = true;
          stars = false;
@@ -273,7 +305,7 @@ public class RayaHouse extends JFrame implements ActionListener
  
       else if(event.getSource()==KetupatsButton)
       {
-         rayaLights = false;
+         rayalights = false;
          ketupats = true;
          sampuls = false;
          stars = false;
@@ -282,9 +314,9 @@ public class RayaHouse extends JFrame implements ActionListener
  
       }//if ketupats
  
-      if(event.getSource()==StarsButton)
+      else if(event.getSource()==StarsButton)
       {
-         rayaLights = false;
+         rayalights = false;
          ketupats = false;
          sampuls = false;
          stars = true;
@@ -293,9 +325,9 @@ public class RayaHouse extends JFrame implements ActionListener
  
       }//if stars
       
-      if(event.getSource()==MoonsButton)
+      else if(event.getSource()==MoonsButton)
       {
-         rayaLights = false;
+         rayalights = false;
          ketupats = false;
          sampuls = false;
          stars = false;
@@ -305,7 +337,7 @@ public class RayaHouse extends JFrame implements ActionListener
       }//if moons
       else if(event.getSource()==addAllButton)
       {
-         rayaLights = true;
+         rayalights = true;
          ketupats = true;
          sampuls = true;
          stars = true;
